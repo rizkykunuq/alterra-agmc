@@ -1,0 +1,634 @@
+{
+	"info": {
+		"_postman_id": "3cf9f96e-1101-4967-a87e-9cb44620c14c",
+		"name": "Day 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19271485"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURL}}/users",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localURL}}/users",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 11:53:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1091"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Get Users\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Ani Wijaya\",\n            \"email\": \"aniwijaya@gmail.com\",\n            \"password\": \"54321\",\n            \"createdAt\": \"2022-09-14T17:00:00+07:00\",\n            \"updatedAt\": \"2022-09-14T17:00:00+07:00\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Sudirman\",\n            \"email\": \"sudirman@gmail.com\",\n            \"password\": \"24531\",\n            \"createdAt\": \"2022-09-14T17:00:00+07:00\",\n            \"updatedAt\": \"2022-09-14T17:00:00+07:00\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Testing Lagi\",\n            \"email\": \"testinglagi@gmail.com\",\n            \"password\": \"testinglagiaja\",\n            \"createdAt\": \"2022-09-15T00:00:00+07:00\",\n            \"updatedAt\": \"2022-09-15T16:26:50+07:00\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Testing Lagi 2\",\n            \"email\": \"testinglagi@gmail.com\",\n            \"password\": \"testinglagiaja\",\n            \"createdAt\": \"2022-09-15T16:27:20+07:00\",\n            \"updatedAt\": \"2022-09-15T16:27:20+07:00\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Testing Lagi 3 Updated Lagi\",\n            \"email\": \"testinglagi@gmail.com\",\n            \"password\": \"testinglagiaja\",\n            \"createdAt\": \"2022-09-15T16:28:03+07:00\",\n            \"updatedAt\": \"2022-09-15T16:30:27.989+07:00\"\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Budi Gemilang\",\n            \"email\": \"budigemilang@gmail.com\",\n            \"password\": \"budigemilang123\",\n            \"createdAt\": \"2022-09-15T16:47:11.951+07:00\",\n            \"updatedAt\": \"2022-09-15T16:47:11.951+07:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURL}}/users/{{idUser}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"users",
+								"{{idUser}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get user by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localURL}}/users/{{idUser}}",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"users",
+										"{{idUser}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 11:54:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Get User ID : 2\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Ani Wijaya\",\n        \"email\": \"aniwijaya@gmail.com\",\n        \"password\": \"54321\",\n        \"createdAt\": \"2022-09-14T17:00:00+07:00\",\n        \"updatedAt\": \"2022-09-14T17:00:00+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Budi Gemilang\",\r\n    \"email\": \"budigemilang@gmail.com\",\r\n    \"password\": \"budigemilang123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/users",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Create new user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Budi Gemilang\",\r\n    \"email\": \"budigemilang@gmail.com\",\r\n    \"password\": \"budigemilang123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localURL}}/users",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 09:47:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Created User\",\n    \"data\": {\n        \"id\": 18,\n        \"name\": \"Budi Gemilang\",\n        \"email\": \"budigemilang@gmail.com\",\n        \"password\": \"budigemilang123\",\n        \"createdAt\": \"2022-09-15T16:47:11.951+07:00\",\n        \"updatedAt\": \"2022-09-15T16:47:11.951+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update user by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Budi Gemilang\",\r\n    \"email\": \"budigemilang@gmail.com\",\r\n    \"password\": \"budigemilangpassword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/users/{{idUser}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"users",
+								"{{idUser}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update user by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Budi Gemilang\",\r\n    \"email\": \"budigemilang@gmail.com\",\r\n    \"password\": \"budigemilangpassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localURL}}/users/{{idUser}}",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"users",
+										"{{idUser}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 09:48:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Updated User ID : 1\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Budi Gemilang\",\n        \"email\": \"budigemilang@gmail.com\",\n        \"password\": \"budigemilangpassword\",\n        \"createdAt\": \"0001-01-01T00:00:00Z\",\n        \"updatedAt\": \"2022-09-15T16:48:43.706+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localURL}}/users/{{idUser}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"users",
+								"{{idUser}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Delete user by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localURL}}/users/{{idUser}}",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"users",
+										"{{idUser}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 09:49:25 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Delete User ID : 1\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Get all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURL}}/books",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get all books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localURL}}/books",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 11:54:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "557"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Get Books\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"The Journey Fight Thanos\",\n            \"author\": \"Dr. Stranger\",\n            \"year\": \"2005\",\n            \"createdAt\": \"2022-09-14T17:00:00+07:00\",\n            \"updatedAt\": \"2022-09-14T17:00:00+07:00\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"How To Be A Billionare\",\n            \"author\": \"Mark Zuckerberg\",\n            \"year\": \"2015\",\n            \"createdAt\": \"2022-09-14T17:00:00+07:00\",\n            \"updatedAt\": \"2022-09-14T17:00:00+07:00\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"The Deadly Coronavirus Outbreak\",\n            \"author\": \"Tapas Kumar Koley\",\n            \"year\": \"2023\",\n            \"createdAt\": \"2022-09-14T17:00:00+07:00\",\n            \"updatedAt\": \"2022-09-14T17:00:00+07:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get book by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURL}}/books/{{idBook}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"books",
+								"{{idBook}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get book by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localURL}}/books/{{idBook}}",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"books",
+										"{{idBook}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 11:54:25 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "225"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Get Book ID : 2\",\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"How To Be A Billionare\",\n        \"author\": \"Mark Zuckerberg\",\n        \"year\": \"2015\",\n        \"createdAt\": \"2022-09-14T17:00:00+07:00\",\n        \"updatedAt\": \"2022-09-14T17:00:00+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Anatomi Manusia Jilid III\",\r\n    \"author\": \"Dr. Santika Dewi\",\r\n    \"year\": 2012\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/books",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Create new book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Anatomi Manusia Jilid III\",\r\n    \"author\": \"Dr. Santika Dewi\",\r\n    \"year\": 2012\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localURL}}/books",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 11:57:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "232"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Created Book\",\n    \"data\": {\n        \"id\": 4,\n        \"title\": \"Anatomi Manusia Jilid III\",\n        \"author\": \"Dr. Santika Dewi\",\n        \"year\": 2012,\n        \"createdAt\": \"2022-09-15T18:57:12.019+07:00\",\n        \"updatedAt\": \"2022-09-15T18:57:12.019+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update book by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Anatomi Manusia Jilid I\",\r\n    \"author\": \"Dr. Santika Dewi\",\r\n    \"year\": 2018\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/books/{{idBook}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"books",
+								"{{idBook}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update book by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Anatomi Manusia Jilid I\",\r\n    \"author\": \"Dr. Santika Dewi\",\r\n    \"year\": 2018\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localURL}}/books/{{idBook}}",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"books",
+										"{{idBook}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 11:59:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Updated Book ID : 4\",\n    \"data\": {\n        \"id\": 4,\n        \"title\": \"Anatomi Manusia Jilid I\",\n        \"author\": \"Dr. Santika Dewi\",\n        \"year\": 2018,\n        \"createdAt\": \"0001-01-01T00:00:00Z\",\n        \"updatedAt\": \"2022-09-15T18:59:44.461+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete book by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localURL}}/books/{{idBook}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"books",
+								"{{idBook}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Delete book by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localURL}}/books/{{idBook}}",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"books",
+										"{{idBook}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 12:00:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Success Delete Book ID : 4\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
